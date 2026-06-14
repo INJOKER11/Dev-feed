@@ -8,6 +8,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
+
         Component: HomePage,
       },
     ],
