@@ -10,7 +10,7 @@ import { Button } from "../shared/ui/Button/Button.tsx";
 
 export const Sidebar = () => {
   return (
-    <div className={"flex max-w-68.75 flex-col gap-4 px-3"}>
+    <div className={"flex w-full max-w-68.75 flex-col gap-4 px-3"}>
       <div className={"gap flex flex-col gap-2"}>
         <span className={"text-text-primary p-3.25 text-3xl"}>Dev feed</span>
         <MenuLink title={"Home"} icon={<HomeIcon className={"h-6 w-6"} />} />
