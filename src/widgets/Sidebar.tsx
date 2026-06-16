@@ -37,7 +37,9 @@ export const Sidebar = () => {
         <MenuLink title={"More"} icon={<MoreIcon className={"h-6 w-6"} />} />
       </div>
       <div className={"flex w-full max-w-56.25"}>
-        <Button onClick={() => {}} text={"Post"} />
+        <Button className={"flex-1"} onClick={() => {}}>
+          Post
+        </Button>
       </div>
     </div>
   );
