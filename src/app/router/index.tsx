@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router";
-import { HomePage } from "../../pages/HomePage.tsx";
+import { HomePage } from "../../pages/HomePage/HomePage.tsx";
 import { MainLayout } from "../../layouts/MainLayout.tsx";
 
 export const router = createBrowserRouter([
