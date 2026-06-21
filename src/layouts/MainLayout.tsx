@@ -4,7 +4,7 @@ import { RightPanel } from "../widgets/RightPanel/RightPanel.tsx";
 
 export const MainLayout = () => {
   return (
-    <div className={"bg-background min-h-screen"}>
+    <div className={"bg-background max-h-screen"}>
       <div className={"mx-auto flex min-h-screen max-w-316.25"}>
         <Sidebar />
         <Outlet />

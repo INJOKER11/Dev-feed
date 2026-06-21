@@ -24,11 +24,13 @@ export const Button = (props: ButtonProps) => {
     variant = "primary",
     size = "lg",
     className,
+    ...restProps
   } = props;
   return (
     <button
       className={`${variantStyles[variant]} ${size === "lg" ? "h-13 rounded-[52px]" : size === "sm" ? "h-7.75 rounded-full px-3.75 py-1.75" : ""} flex cursor-pointer items-center justify-center border border-none outline-none hover:opacity-50 active:opacity-70 ${className ?? ""}`}
       onClick={onClick}
+      {...restProps}
     >
       <span
         className={`${textStyles[variant]} ${
