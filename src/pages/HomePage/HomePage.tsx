@@ -1,4 +1,5 @@
 import { PostCard } from "./PostCard.tsx";
+import { PostForm } from "./PostForm.tsx";
 
 const mockPosts = [
   {
@@ -24,6 +25,7 @@ export const HomePage = () => {
       >
         Home
       </div>
+      <PostForm />
       {mockPosts.map((post) => (
         <PostCard key={post.id} post={post} />
       ))}
