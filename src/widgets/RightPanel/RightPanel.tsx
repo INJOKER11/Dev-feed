@@ -2,18 +2,12 @@ import { SearchBar } from "./SearchBar.tsx";
 import { ListPanel } from "./ListPanel.tsx";
 import { TrendsItem } from "./TrendsItem.tsx";
 import { FollowItem } from "./FollowItem.tsx";
+import type { User } from "../../shared/types/User.ts";
 
 export type TestTrend = {
   id: number;
   title: string;
   posts: number;
-};
-
-export type TestFollowItem = {
-  id: number;
-  avatar: string;
-  title: string;
-  username: string;
 };
 
 const mockTrends: TestTrend[] = [
@@ -24,10 +18,10 @@ const mockTrends: TestTrend[] = [
   },
 ];
 
-const mockFollow: TestFollowItem[] = [
+const mockFollow: User[] = [
   {
     id: 1,
-    title: "Test follow",
+    name: "Test follow",
     username: "@test_follow",
     avatar:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM37K4xYKB59tximBNCcRrps2NtAiESZ0iMFhoVj-a5w&s=10",

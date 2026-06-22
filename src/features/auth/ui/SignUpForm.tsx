@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Input } from "../../../shared/ui/Input/Input.tsx";
 import { Button } from "../../../shared/ui/Button/Button.tsx";
+import { useNavigate } from "react-router-dom";
 
 type SignUpForm = {
   email: string;
@@ -9,6 +10,7 @@ type SignUpForm = {
 };
 
 export const SignUpForm = () => {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm<SignUpForm>({
     defaultValues: {
       email: "",
@@ -22,13 +24,26 @@ export const SignUpForm = () => {
   };
 
   return (
-    <form className={"flex flex-col gap-3"} onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className={"flex w-full max-w-100 flex-col gap-3"}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Input type={"email"} label={"Email"} {...register("email")} />
       <Input type={"password"} label={"Password"} {...register("password")} />
       <Input type={"username"} label={"Username"} {...register("username")} />
-      <Button type={"submit"} className={"mt-2"} size={"sm"}>
-        Login
-      </Button>
+      <div className={"mt-2 flex gap-2"}>
+        <Button type={"submit"} size={"sm"} className={"flex-1"}>
+          Register
+        </Button>
+        <Button
+          onClick={() => navigate("/login")}
+          variant={"secondary"}
+          className={"flex-1"}
+          size={"sm"}
+        >
+          Already have account
+        </Button>
+      </div>
     </form>
   );
 };

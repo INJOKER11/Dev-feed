@@ -1,17 +1,11 @@
-import type { TestFollowItem } from "../../widgets/RightPanel/RightPanel.tsx";
 import { Avatar } from "../../shared/ui/Avatar/Avatar.tsx";
 import type { ReactNode } from "react";
 import ReplyIcon from "../../assets/icons/reply.svg?react";
 import RepostIcon from "../../assets/icons/retweet.svg?react";
 import HeartIcon from "../../assets/icons/heart.svg?react";
+import type { Post } from "../../shared/types/Post.ts";
 
-export type PostType = {
-  id: number;
-  text: string;
-  author: TestFollowItem;
-};
-
-export const PostCard = ({ post }: { post: PostType }) => {
+export const PostCard = ({ post }: { post: Post }) => {
   const { text, author } = post;
   return (
     <div className={"border-border flex gap-3 border-b p-3"}>
@@ -19,7 +13,7 @@ export const PostCard = ({ post }: { post: PostType }) => {
       <div className={"flex flex-col gap-1.25"}>
         <div className={"flex gap-1"}>
           <span className={"text-body text-text-primary font-bold"}>
-            {author.title}
+            {author.name}
           </span>
           <span className={"text-body text-text-secondary"}>
             {author.username}

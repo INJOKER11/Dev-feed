@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Sidebar } from "../widgets/Sidebar.tsx";
+import { Sidebar } from "../widgets/Sidebar/Sidebar.tsx";
 import { RightPanel } from "../widgets/RightPanel/RightPanel.tsx";
 
 export const MainLayout = () => {

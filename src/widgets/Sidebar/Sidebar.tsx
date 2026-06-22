@@ -1,12 +1,12 @@
 import { MenuLink } from "./MenuLink.tsx";
-import HomeIcon from "../assets/icons/home.svg?react";
-import ExploreIcon from "../assets/icons/explore.svg?react";
-import NotificationsIcon from "../assets/icons/notifications.svg?react";
-import MessagesIcon from "../assets/icons/messages.svg?react";
-import BookmarksIcon from "../assets/icons/bookmarks.svg?react";
-import ProfileIcon from "../assets/icons/profile.svg?react";
-import MoreIcon from "../assets/icons/more.svg?react";
-import { Button } from "../shared/ui/Button/Button.tsx";
+import HomeIcon from "../../assets/icons/home.svg?react";
+import ExploreIcon from "../../assets/icons/explore.svg?react";
+import NotificationsIcon from "../../assets/icons/notifications.svg?react";
+import MessagesIcon from "../../assets/icons/messages.svg?react";
+import BookmarksIcon from "../../assets/icons/bookmarks.svg?react";
+import ProfileIcon from "../../assets/icons/profile.svg?react";
+import MoreIcon from "../../assets/icons/more.svg?react";
+import { Button } from "../../shared/ui/Button/Button.tsx";
 import { useNavigate } from "react-router-dom";
 
 export const Sidebar = () => {
